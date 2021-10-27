@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+
+        <script>
+
+
+            // let badArray = new Array(-6)
+            // // Error => Uncaught RangeError: Invalid array length(…)
+
+
+
+            // let name = "Ted"
+            // console.log(nme)
+
+
+
+            // function doSomething() {
+            //     console.log("I'm doing something!);
+            // // Uncaught SyntaxError: Unexpected end of input
+
+
+
+            // let name = "Bob"
+            // name.push(' and Jessie')
+            // // Uncaught TypeError: name.push is not a function
+
+
+
+
+
+            function getUserName(user) {
+                if (!user.name) {
+                    throw new SyntaxError("Incomplete data: no name");
+                }
+                return user.name;
+            }
+
+
+
+
+            try {
+                getUserName({ nasme: 'ger', age: 99 });
+            } catch (error) {
+                console.log("Catch gets executed if there's an error.");
+                console.error(error);
+            } finally {
+                console.log('Salgo en cualquier circunstancia')
+            }
+
+            console.log('Estoy tras la excepción y el código no se ha bloqueado :D')
+
+        </script>
+    </body>
+
+</html>

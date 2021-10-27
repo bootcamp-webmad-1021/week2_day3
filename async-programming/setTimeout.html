@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <button id="timeoutAbort">DETENER TEMPORIZADOR</button>
+
+        <script>
+
+
+            // setTimeout
+
+            // console.log('PRIMERO')
+
+            // const setTimeoutID = setTimeout(() => {
+            //     console.log('PROGRAMADO')
+            // }, 5000)
+
+            // console.log('SEGUNDO')
+
+
+            // document.querySelector('#timeoutAbort').onclick = () => {
+            //     clearTimeout(setTimeoutID)
+            //     console.log('El temporizador con Id', setTimeoutID, 'ha sido detenido')
+            // }
+
+
+            function sync1() {
+                console.log("1")
+            }
+
+            function async2() {
+                setTimeout(() => console.log("2"), 0)
+            }
+
+            function sync3() {
+                console.log("3")
+            }
+
+            sync1()
+            async2()
+            sync3()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </body>
+
+</html>

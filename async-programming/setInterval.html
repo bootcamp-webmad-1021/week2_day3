@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <p>El intervalo se ha ejecutado <span>0</span> veces</p>
+        <p id="warning"></p>
+        <button id="stop-interval">DETENER INTERVALO</button>
+
+        <script>
+
+            let counter = 0
+            const paragraph = document.querySelector("p span")
+
+            const intervalId = setInterval(() => {
+
+                paragraph.textContent = ++counter
+
+            }, 1000)
+
+
+            const timeoutId = setTimeout(() => {
+                clearInterval(intervalId)
+            }, 5000)
+
+            clearTimeout(timeoutId)
+
+            const button = document.querySelector("#stop-interval")
+            const warningText = document.querySelector("#warning")
+            button.addEventListener("click", () => {
+                clearInterval(intervalId)
+                warningText.textContent = "Intervalo detenido!"
+            })
+
+            console.log("Intervalo iniciado! El contador al inicio vale: ", counter)
+            console.log("El valor del intervalo es: ", intervalId)
+        </script>
+
+    </body>
+
+</html>
